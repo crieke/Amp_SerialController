@@ -1,0 +1,10 @@
+[Unit]
+Description=Check Amp Status over RS232 Interface
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/nohup /usr/bin/python /home/pi/rs232ampcheck.py &
+
+[Install]
+WantedBy=multi-user.target
